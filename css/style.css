@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f7f5;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background-color: #006d5b;
+  color: white;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #00a98f;
+}
+
+/* Main content */
+main h1 {
+  margin-bottom: 15px;
+  color: #006d5b;
+}
+
+main p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Home page styles */
+.ship-variety ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Gallery styles */
+.ship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+.ship-item {
+  background: #fefcf9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.ship-item:hover {
+  transform: scale(1.02);
+}
+
+.ship-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.ship-item h3 {
+  margin: 10px 15px 5px;
+  color: #006d5b;
+}
+
+.ship-item p {
+  margin: 5px 15px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Services */
+.services-content .service-item {
+  background: #fefcf9;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.services-content .service-item h2 {
+  color: #00a98f;
+  margin-bottom: 10px;
+}
+
+/* About Us */
+.about-content section {
+  margin-bottom: 25px;
+}
+
+.about-content h2 {
+  color: #006d5b;
+  margin-bottom: 10px;
+}
+
+.about-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #333;
+}
+
+.about-content ul li {
+  margin-bottom: 5px;
+}
+
+/* Subscription */
+.subscription-content form {
+  background: #fefcf9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.subscription-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.subscription-content input[type="text"],
+.subscription-content input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.subscription-content input[type="text"]:focus,
+.subscription-content input[type="email"]:focus {
+  border-color: #00a98f;
+  outline: none;
+}
+
+.subscription-content button {
+  background-color: #00a98f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-content button:hover {
+  background-color: #006d5b;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #006d5b;
+  color: white;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ship-list {
+    grid-template-columns: 1fr;
+  }
+}
